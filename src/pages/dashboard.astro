@@ -3,7 +3,10 @@ import DashboardShell from "../components/DashboardShell.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Eventio | Dashboard">
+<MainLayout
+  title="Eventio | Dashboard"
+  description="Browse all events and switch between grid and list views on Eventio."
+>
   <DashboardShell title="Dashboard" subtitle="02-1-1-Dashboard" showSubtitle={true} listView={false}>
     <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {Array.from({ length: 6 }).map((_, index) => (

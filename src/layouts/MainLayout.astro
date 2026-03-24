@@ -3,9 +3,24 @@ import "../styles/global.css";
 
 interface Props {
   title: string;
+  description?: string;
+  ogType?: "website" | "article";
+  ogImage?: string;
+  path?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "A platform that allows registered users to sign up for and create events.",
+  ogType = "website",
+  ogImage = "/images/og-default.png",
+  path = Astro.url.pathname
+} = Astro.props;
+
+const siteName = "Eventio";
+const siteUrl = "https://mojeeventio.vercel.app";
+const canonicalUrl = new URL(path, siteUrl).toString();
+const ogImageUrl = new URL(ogImage, siteUrl).toString();
 ---
 
 <html lang="en">
@@ -18,6 +33,19 @@ const { title } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Playfair+Display:wght@400&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="description" content={description} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <title>{title}</title>
   </head>
   <body>
