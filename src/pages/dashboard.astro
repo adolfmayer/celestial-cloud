@@ -4,14 +4,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Eventio | Dashboard">
-  <DashboardShell title="Dashboard" subtitle="02-1-1-Dashboard" listView={false}>
+  <DashboardShell title="Dashboard" subtitle="02-1-1-Dashboard" showSubtitle={true} listView={false}>
     <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {Array.from({ length: 6 }).map((_, index) => (
         <article class="surface-card p-4 sm:p-5">
-          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-violet-600">Event #{index + 1}</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-slate-600">Music · Community</p>
           <h2 class="mt-2 text-lg font-semibold">Product Meetup {index + 1}</h2>
           <p class="mt-2 text-sm text-slate-500">Thursday, 19:00 · Bratislava</p>
-          <a class="mt-4 inline-block text-sm font-semibold text-violet-700 hover:text-violet-800" href="/dashboard-detail">Open detail</a>
+          <p class="chip-soft mt-3 rounded-md px-2.5 py-1.5 text-xs">24 attendees</p>
+          <a class="link-brand mt-4 inline-block text-sm font-semibold" href="/dashboard-detail">Open detail</a>
         </article>
       ))}
     </section>

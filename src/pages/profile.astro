@@ -5,25 +5,29 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout title="Eventio | My Profile">
   <main class="min-h-screen px-4 py-8 sm:px-6">
     <section class="surface-card mx-auto grid w-full max-w-4xl gap-6 p-6 sm:p-8 lg:grid-cols-[1fr_2fr]">
-      <aside class="rounded-2xl bg-violet-50 p-5">
-        <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-violet-700 text-2xl font-semibold text-white">
+      <aside class="rounded-xl bg-slate-100 p-5">
+        <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-full primary-btn text-2xl font-semibold text-white">
           AL
         </div>
         <h1 class="mt-4 text-center text-xl font-semibold">Ada Lovelace</h1>
         <p class="mt-1 text-center text-sm text-slate-600">Product Engineer</p>
       </aside>
       <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">04-1-1-My-Profile</p>
+        <p class="eyebrow">04-1-1-My-Profile</p>
         <h2 class="mt-2 text-2xl font-semibold tracking-tight">My profile</h2>
         <div class="mt-6 grid gap-4 sm:grid-cols-2">
-          <div class="rounded-xl border border-slate-200 p-4">
+          <div class="rounded-xl border border-slate-200 bg-white p-4">
             <p class="text-xs uppercase tracking-[0.15em] text-slate-500">Joined events</p>
             <p class="mt-2 text-2xl font-semibold">18</p>
           </div>
-          <div class="rounded-xl border border-slate-200 p-4">
+          <div class="rounded-xl border border-slate-200 bg-white p-4">
             <p class="text-xs uppercase tracking-[0.15em] text-slate-500">Created events</p>
             <p class="mt-2 text-2xl font-semibold">4</p>
           </div>
+        </div>
+        <div class="mt-6 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-600">
+          <p><span class="font-semibold text-slate-800">Email:</span> ada@example.com</p>
+          <p class="mt-2"><span class="font-semibold text-slate-800">Location:</span> Bratislava</p>
         </div>
         <button type="button" class="mt-6 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700">
           Edit Profile

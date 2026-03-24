@@ -5,26 +5,26 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout title="Eventio | Create New">
   <main class="min-h-screen px-4 py-8 sm:px-6">
     <section class="surface-card mx-auto w-full max-w-3xl p-6 sm:p-8">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">03-2-1-Create-New-Event</p>
-      <h1 class="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">Create new event</h1>
+      <p class="eyebrow">03-2-1-Create-New-Event</p>
+      <h1 class="type-title mt-2">Create new event</h1>
       <form class="mt-6 grid gap-4 sm:grid-cols-2">
         <label class="block text-sm font-medium text-slate-700 sm:col-span-2">Event name
-          <input type="text" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100" placeholder="Design Community Meetup" />
+          <input type="text" class="field-input mt-1" placeholder="Design Community Meetup" />
         </label>
         <label class="block text-sm font-medium text-slate-700">Date
-          <input type="text" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100" placeholder="DD/MM/YYYY" />
+          <input type="text" class="field-input mt-1" placeholder="DD/MM/YYYY" />
         </label>
         <label class="block text-sm font-medium text-slate-700">Time
-          <input type="text" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100" placeholder="19:00" />
+          <input type="text" class="field-input mt-1" placeholder="19:00" />
         </label>
         <label class="block text-sm font-medium text-slate-700 sm:col-span-2">Location
-          <input type="text" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100" placeholder="Brno, Czechia" />
+          <input type="text" class="field-input mt-1" placeholder="Brno, Czechia" />
         </label>
         <label class="block text-sm font-medium text-slate-700 sm:col-span-2">Description
-          <textarea class="mt-1 min-h-28 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100" placeholder="Write event details..."></textarea>
+          <textarea class="field-input mt-1 min-h-28" placeholder="Write event details..."></textarea>
         </label>
         <div class="sm:col-span-2">
-          <button type="button" class="rounded-xl bg-violet-700 px-4 py-3 text-sm font-semibold text-white hover:bg-violet-800">Create Event</button>
+          <button type="button" class="primary-btn px-4 py-3 text-sm font-semibold">Create Event</button>
         </div>
       </form>
     </section>

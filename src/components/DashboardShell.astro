@@ -3,9 +3,10 @@ interface Props {
   title: string;
   subtitle?: string;
   listView?: boolean;
+  showSubtitle?: boolean;
 }
 
-const { title, subtitle = "", listView = false } = Astro.props;
+const { title, subtitle = "", listView = false, showSubtitle = false } = Astro.props;
 ---
 
 <main class="min-h-screen px-4 py-6 sm:px-6 lg:px-10">
@@ -13,22 +14,22 @@ const { title, subtitle = "", listView = false } = Astro.props;
     <header class="surface-card mb-6 p-4 sm:p-5">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">Eventio</p>
-          <h1 class="mt-1 text-xl font-semibold sm:text-2xl">{title}</h1>
-          {subtitle && <p class="mt-1 text-sm text-slate-500">{subtitle}</p>}
+          <p class="eyebrow">Eventio</p>
+          <h1 class="type-title mt-1">{title}</h1>
+          {showSubtitle && subtitle && <p class="type-body mt-1 text-slate-500">{subtitle}</p>}
         </div>
 
         <div class="flex flex-wrap items-center gap-2">
           <button
-            class="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700"
+            class="rounded-md border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm"
             type="button"
           >
-            SHOW: All Events
+            SHOW: ALL EVENTS
           </button>
           <button
             class:list={[
-              "rounded-xl px-4 py-2 text-sm font-medium transition",
-              listView ? "bg-violet-700 text-white" : "border border-slate-200 bg-white text-slate-700"
+              "rounded-md px-4 py-2 text-sm font-medium transition",
+              listView ? "primary-btn" : "border border-slate-200 bg-white text-slate-700 shadow-sm"
             ]}
             type="button"
           >
@@ -36,8 +37,8 @@ const { title, subtitle = "", listView = false } = Astro.props;
           </button>
           <button
             class:list={[
-              "rounded-xl px-4 py-2 text-sm font-medium transition",
-              listView ? "border border-slate-200 bg-white text-slate-700" : "bg-violet-700 text-white"
+              "rounded-md px-4 py-2 text-sm font-medium transition",
+              listView ? "border border-slate-200 bg-white text-slate-700 shadow-sm" : "primary-btn"
             ]}
             type="button"
           >
