@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #101828;
+  --muted: #667085;
+  --primary: #6d28d9;
+  --primary-strong: #5b21b6;
+  --stroke: #e4e7ec;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #ece9ff 0%, var(--bg) 45%);
+  color: var(--text);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: 1rem;
+  box-shadow: 0 16px 40px -24px rgba(16, 24, 40, 0.35);
+}
