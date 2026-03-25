@@ -7,6 +7,19 @@ import MainLayout from "../layouts/MainLayout.astro";
   description="Sign in to Eventio to discover, join, and manage your events."
 >
   <main class="min-h-screen bg-white">
+    <div class="fixed left-0 top-0 z-50 px-6 py-7 sm:px-10 lg:hidden">
+      <svg width="23" height="22" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 26.942V0H16.872V4.94H5.244V11.096H15.77V15.77H5.244V22.002H16.872V26.942H0ZM21.47 23.75C21.47 22.7873 21.8057 21.9703 22.477 21.299C23.1483 20.6277 23.9653 20.292 24.928 20.292C25.4093 20.292 25.8653 20.3807 26.296 20.558C26.7267 20.7353 27.1003 20.9823 27.417 21.299C27.7337 21.6157 27.9807 21.983 28.158 22.401C28.3353 22.819 28.424 23.2687 28.424 23.75C28.424 24.2313 28.3353 24.681 28.158 25.099C27.9807 25.517 27.7337 25.8843 27.417 26.201C27.1003 26.5177 26.7267 26.7647 26.296 26.942C25.8653 27.1193 25.4093 27.208 24.928 27.208C23.9653 27.208 23.1483 26.8723 22.477 26.201C21.8057 25.5297 21.47 24.7127 21.47 23.75Z" fill="#323C46"></path>
+      </svg>
+    </div>
+
+    <div class="fixed right-0 top-0 z-50 px-6 py-7 sm:px-10">
+      <p class="text-[14px] font-normal leading-6 text-[#C9CED3]">
+        Don't have account?
+        <a href="/signup" class="ml-1 text-[14px] font-medium leading-6 text-[#323C46] hover:underline">SIGN UP</a>
+      </p>
+    </div>
+
     <div class="min-h-screen w-full lg:grid lg:grid-cols-[minmax(0,30rem)_minmax(0,1fr)]">
       <aside class="relative hidden min-h-screen overflow-hidden bg-[#323c46] lg:block">
         <picture class="absolute inset-0">
@@ -27,18 +40,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 
       <section class="relative min-h-screen px-6 py-7 sm:px-10 lg:px-0">
         <div class="relative mx-auto min-h-screen w-full max-w-xl lg:px-12 xl:px-16">
-          <div class="absolute inset-x-0 top-0 z-10 flex items-center justify-between lg:justify-end lg:pt-10">
-            <div class="lg:hidden">
-              <svg width="23" height="22" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 26.942V0H16.872V4.94H5.244V11.096H15.77V15.77H5.244V22.002H16.872V26.942H0ZM21.47 23.75C21.47 22.7873 21.8057 21.9703 22.477 21.299C23.1483 20.6277 23.9653 20.292 24.928 20.292C25.4093 20.292 25.8653 20.3807 26.296 20.558C26.7267 20.7353 27.1003 20.9823 27.417 21.299C27.7337 21.6157 27.9807 21.983 28.158 22.401C28.3353 22.819 28.424 23.2687 28.424 23.75C28.424 24.2313 28.3353 24.681 28.158 25.099C27.9807 25.517 27.7337 25.8843 27.417 26.201C27.1003 26.5177 26.7267 26.7647 26.296 26.942C25.8653 27.1193 25.4093 27.208 24.928 27.208C23.9653 27.208 23.1483 26.8723 22.477 26.201C21.8057 25.5297 21.47 24.7127 21.47 23.75Z" fill="#323C46"></path>
-              </svg>
-            </div>
-            <p class="text-[14px] font-normal leading-6 text-[#C9CED3]">
-              Don't have account?
-              <a href="/signup" class="ml-1 text-[14px] font-medium leading-6 text-[#323C46] hover:underline">SIGN UP</a>
-            </p>
-          </div>
-
           <div class="grid min-h-screen place-items-center pt-16 lg:pt-0">
             <div class="mx-auto w-full max-w-sm lg:mx-0">
               <div class="text-center lg:text-left">
